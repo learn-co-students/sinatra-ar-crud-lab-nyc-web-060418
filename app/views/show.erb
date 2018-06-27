@@ -1,0 +1,17 @@
+<a href="/posts">CLick to view all posts!</a>
+<br>
+
+<h2><%= @post.name %></h2>
+<p><%= @post.content %></p>
+
+<br>
+
+<a href="/posts/<%= @post.id %>/edit">Edit</a>
+
+<br>
+<br>
+
+<form method="POST" action="/posts/<%= @post.id %>/delete">
+  <input id="hidden" type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete" id="delete"/>
+</form>
